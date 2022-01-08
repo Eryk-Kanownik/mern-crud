@@ -17,6 +17,7 @@ body {
   position: sticky;
   top: 0;
   box-shadow: 0 0 1px;
+  font-size: 20px;
 }
 
 .content {
@@ -95,22 +96,80 @@ body {
   .card .above {
     font-size: 15px;
   }
+
+  .modal .block {
+    width: 95vw !important;
+  }
+  .modal .block .form {
+    padding: 10px 10px !important;
+  }
+  .modal .block .form textarea {
+    height: 40vh !important;
+  }
+  .modal .block .form .input[type=text] {
+    width: 100%;
+  }
+  .modal .block .submit {
+    padding: 10px 10px !important;
+  }
+  .modal .block .submit button {
+    height: 50px;
+  }
 }
 .modal {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(54, 54, 54, 0.787);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
 .modal .block {
-  background-color: red;
+  background-color: white;
   width: 50vw;
-  height: 50vh;
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 1;
+}
+.modal .block .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: dodgerblue;
+}
+.modal .block .top h3 {
+  margin: 0 0 0 0;
+}
+.modal .block .top span {
+  transition-duration: 200ms;
+  cursor: pointer;
+  font-size: 20px;
+}
+.modal .block .top span:hover {
+  color: white;
+}
+.modal .block .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  padding: 10px;
+}
+.modal .block .form form textarea {
+  width: 100%;
+  height: 30vh;
+  padding: 3px;
+}
+.modal .block .form form input[type=text] {
+  padding: 3px;
+}
+.modal .block .submit {
+  padding: 10px;
+}
+.modal .block .submit button {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
+    "client": "concurrently \"npm start --prefix client\" \"sass client/src/sass/style.scss client/src/sass/style.css --watch\" ",
     "project": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
